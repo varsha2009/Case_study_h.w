@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+    <title>MobileNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet"> 
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body style="background-color: rgb(253, 253, 253);font-family: 'Original Surfer', cursive;text-align: center;background-color: rgb(163, 255, 206);">
+    <h2 style="background-color: rgb(255, 194, 242);margin-top: 0px;">Case Study
+        <img src="gif.gif" width=60 height=60 style="border-radius: 50%;"> 
+    </h2>
+    <br>
+
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;box-shadow: 5px 8px 18px black;">
+        <br>
+        <label class="test">Test image</label>
+        <br>
+        <img class="test1" src="bag.jpg" width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-1A">backpack</span></div>
+        <div>Output on MOBILENET MODAL - <span id="result-1"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+    </div>
+    </center>
+    </div>
+
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div class="big_div" style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;">
+        <br>
+        <label class="test ">Test image</label>
+        <br>
+        <img class="test1" src="book.jpg" width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-2A">text , book</span></div>
+        <div>Output on MOBILENET MODAL - <span id="result-2"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+        </center><br><br>
+    </div>
+    </div>
+    <hr class="new1">
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div class="big_div" style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;">
+        <br>
+        <label class="test ">Test image</label>
+        <br>
+        <img class="test1" src="bottle.jpg" width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-3A"> cylinder , bottle , vessel</span></div>
+        <div>Output on MOBILENET MODAL - <span id="result-3"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+        </center><br><br>
+    </div>
+    </div>
+
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div class="big_div" style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;">
+        <br>
+        <label class="test ">Test image</label>
+        <br>
+        <img class="test1" src="headphones.jpg" width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-4A">headphones</span></div>
+        <div>Output on MOBILENET MODAL - <span id="result-4"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+        </center><br><br>
+    </div>
+    </div>
+    <hr class="new1"> 
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div class="big_div" style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;">
+        <br>
+        <label class="test ">Test image</label>
+        <br>
+        <img class="test1" src="vessel.jpg" width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-6"></span>cup</div>
+        <div>Output on MOBILENET MODAL - <span id="result-6"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+        </center><br><br>
+    </div>
+    </div>
+
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div class="big_div" style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;">
+        <br>
+        <label class="test ">Test image</label>
+        <br>
+        <img class="test1" src="watch.jpg" width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-6">watch , clock</span></div>
+        <div>Output on MOBILENET MODAL - <span id="result-6"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+        </center><br><br>
+    </div>
+    </div>
+    <hr class="new1"> 
+
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div class="big_div" style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;">
+        <br>
+        <label class="test ">Test image</label>
+        <br>
+        <img class="test1" src="pillow.jpg" width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-6">throw pillow , sofa</span></div>
+        <div>Output on MOBILENET MODAL - <span id="result-6"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+        </center><br><br>
+    </div>
+    </div>
+
+    <div class="col-lg-6 col-xs-12">
+        <center>
+        <br>  
+        <div class="big_div" style="background-color: rgb(255, 194, 242); width: 400px;border-top-left-radius: 10%;border-top-right-radius: 10%;">
+        <br>
+        <label class="test ">Test image</label>
+        <br>
+        <img class="test1" src="https://scube-ergo.com/assets/images/summa/summa.jpg"width="200" height="250">
+        <br>
+        <br>
+        <div style="background-color: white;width: 400px;padding: 5px ;">
+        <div>Output on MICROSOFT AZURE - <span id="result-6">chair</span></div>
+        <div>Output on MOBILENET MODAL - <span id="result-6"></span></div>
+        </div>
+        
+        <h3>Result - </h3>
+        <h3 style="background-color: rgb(255, 194, 242); box-shadow: 5px 5px 18px white;width: 400px;padding: 5px;border-left-style: solid ;"></h3>
+        </center><br><br>
+    </div>
+    </div>
+
+   
+</body>
+   
+

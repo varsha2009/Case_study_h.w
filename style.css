@@ -1,0 +1,19 @@
+.test{
+    background-color: white;
+    box-shadow: 2px 5px 18px rgb(255, 255, 255);
+    width: 200px;
+   
+    font-size: 20px;
+}
+.test1{
+    box-shadow: 2px 5px 18px rgb(255, 255, 255);
+}
+hr.new1 {
+    border: 5px solid rgb(113, 175, 175);
+  border-radius: 5px;
+  width: 95%;
+  }
+.big_div{
+    box-shadow : 5px 5px 18px black;
+}  
+  
